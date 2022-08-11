@@ -3,4 +3,6 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render(request, 'my_to_do_list/index.html', {
+        'title': 'TO DO LIST 777',
+    })

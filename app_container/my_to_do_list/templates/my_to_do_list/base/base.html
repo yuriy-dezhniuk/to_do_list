@@ -1,0 +1,15 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>{% block title %}My tasks{% endblock %}</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="{% static 'my_to_do_list/styles/base.css' %}">
+{% block site_css %}{% endblock %}
+<body>
+    <main class="main_block">
+        {% block body %}{% endblock %}
+    </main>
+</body>
+</html> 
