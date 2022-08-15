@@ -1,0 +1,16 @@
+{% extends 'my_to_do_list/base/base.html' %}
+{% load static %}
+
+{% block title %}All Tasks{% endblock %}
+
+{% block site_css %}
+    {% comment %} <link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}"> {% endcomment %}
+{% endblock %}
+
+{% block body %}
+<section>
+    {% include "./includes/header.html" %}
+    <h2>{{title}}</h2>
+    <p>Separate task</p>
+</section>
+{% endblock %}
