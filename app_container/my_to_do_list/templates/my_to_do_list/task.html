@@ -4,13 +4,16 @@
 {% block title %}All Tasks{% endblock %}
 
 {% block site_css %}
-    {% comment %} <link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'my_to_do_list/styles/paiges/task.css' %}">
 {% endblock %}
 
 {% block body %}
 <section>
     {% include "./includes/header.html" %}
-    <h2>{{title}}</h2>
-    <p>Separate task</p>
+    <div class="width_container">
+        <div><span>Priority: {{priority}}</span></div>
+        <h1>{{title}}</h1>
+        <p>{{description|linebreaks }}</p>
+    </div>
 </section>
 {% endblock %}
