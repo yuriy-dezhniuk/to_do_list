@@ -4,13 +4,23 @@
 {% block title %}All Tasks{% endblock %}
 
 {% block site_css %}
-    {% comment %} <link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'my_to_do_list/styles/paiges/index.css' %}">
 {% endblock %}
 
 {% block body %}
+{% include "./includes/header.html" %}
 <section>
-    {% include "./includes/header.html" %}
-    <h2>{{title}}</h2>
-    <p>All tasks here</p>
+    <div class="width_container">
+        <h1>{{title}}</h1>
+        {% for task in tasks %}
+            <div class="task_thumbnail">
+                <h2>{{ task.title }}</h2>
+                <div class="task_description">
+                    {{ task.description|linebreaks|truncatechars:400 }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
 </section>
 {% endblock %}
