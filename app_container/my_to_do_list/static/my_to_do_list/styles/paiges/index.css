@@ -1,0 +1,29 @@
+:root{
+    --color-1: #673ab7;
+    --color-2: rgb(48,25,52);
+}
+.width_container {
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 80%;
+}
+.width_container h1 {
+    margin: 1.5em 1em;
+    text-align: center;
+    color: var(--color-2);
+}
+@media(max-width: 991px){
+    .width_container {
+        max-width: 100%;
+    }
+}
+.task_thumbnail {
+    background-color: rgb(177,170,217);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    color: var(--color-2);
+}
+.task_thumbnail h2 {
+    text-align: center;
+}
