@@ -11,9 +11,15 @@
 {% include "./includes/header.html" %}
 <section>
     <div class="width_container">
-        <div><span>Priority: {{priority}}</span></div>
+        <div class="container_right_sidebar">
+            <div class="right_sidebar">
+                <div><span class="bold_font">Priority:</span> {{priority}}</div>
+                <div><span class="bold_font">Deadline:</span> {{ deadline }}</div>
+                <div><span class="bold_font">Created:</span> {{ created }}</div>
+            </div>
+        </div>
         <h1>{{title}}</h1>
-        <p>{{description|linebreaks }}</p>
+        <div>{{description|linebreaks }}</div>
     </div>
 </section>
 {% endblock %}
